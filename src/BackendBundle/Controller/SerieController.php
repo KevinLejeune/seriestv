@@ -6,8 +6,8 @@ use BackendBundle\Entity\Serie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Serie controller.
@@ -93,6 +93,9 @@ class SerieController extends Controller
      */
     public function editAction(Request $request, Serie $serie)
     {
+        $serie->setAffiche(
+            new File('uploads/'.$serie->getAffiche())
+        );
         $deleteForm = $this->createDeleteForm($serie);
         $editForm = $this->createForm('BackendBundle\Form\SerieType', $serie);
         $editForm->handleRequest($request);
