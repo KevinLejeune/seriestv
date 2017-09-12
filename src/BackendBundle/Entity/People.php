@@ -4,6 +4,7 @@ namespace BackendBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * People
  *
@@ -35,6 +36,14 @@ class People
      */
     private $birthDate;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="People_type", inversedBy="peoples")
+     */
+    private $people_types;
+
+    public function __construct() {
+        $this->$people_types = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -92,5 +101,39 @@ class People
     public function getBirthDate()
     {
         return $this->birthDate;
+    }
+
+    /**
+     * Add peopleType
+     *
+     * @param \BackendBundle\Entity\People_type $peopleType
+     *
+     * @return People
+     */
+    public function addPeopleType(\BackendBundle\Entity\People_type $peopleType)
+    {
+        $this->people_types[] = $peopleType;
+
+        return $this;
+    }
+
+    /**
+     * Remove peopleType
+     *
+     * @param \BackendBundle\Entity\People_type $peopleType
+     */
+    public function removePeopleType(\BackendBundle\Entity\People_type $peopleType)
+    {
+        $this->people_types->removeElement($peopleType);
+    }
+
+    /**
+     * Get peopleTypes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPeopleTypes()
+    {
+        return $this->people_types;
     }
 }

@@ -121,4 +121,14 @@ class Serie
 
         return $this;
     }
+
+    /**
+     * Get affiche
+     *
+     * @return string
+     */
+    public function getAffiche()
+    {
+        return $this->affiche;
+    }
 }

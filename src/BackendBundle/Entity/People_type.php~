@@ -28,6 +28,14 @@ class People_type
      */
     private $lib;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="People", mappedBy="peopleTypes");
+     */
+    private $peoples;
+
+    public function __construct() {
+        $this->peoples = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id

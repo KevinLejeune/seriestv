@@ -28,6 +28,14 @@ class People_type
      */
     private $lib;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="People", mappedBy="peopleTypes");
+     */
+    private $peoples;
+
+    public function __construct() {
+        $this->peoples = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -61,5 +69,39 @@ class People_type
     public function getLib()
     {
         return $this->lib;
+    }
+
+    /**
+     * Add people
+     *
+     * @param \BackendBundle\Entity\People $people
+     *
+     * @return People_type
+     */
+    public function addPeople(\BackendBundle\Entity\People $people)
+    {
+        $this->peoples[] = $people;
+
+        return $this;
+    }
+
+    /**
+     * Remove people
+     *
+     * @param \BackendBundle\Entity\People $people
+     */
+    public function removePeople(\BackendBundle\Entity\People $people)
+    {
+        $this->peoples->removeElement($people);
+    }
+
+    /**
+     * Get peoples
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPeoples()
+    {
+        return $this->peoples;
     }
 }
