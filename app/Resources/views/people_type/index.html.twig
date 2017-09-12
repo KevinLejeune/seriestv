@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>People_types list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lib</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for people_type in people_types %}
+            <tr>
+                <td><a href="{{ path('people_type_show', { 'id': people_type.id }) }}">{{ people_type.id }}</a></td>
+                <td>{{ people_type.lib }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('people_type_show', { 'id': people_type.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('people_type_edit', { 'id': people_type.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('people_type_new') }}">Create a new people_type</a>
+        </li>
+    </ul>
+{% endblock %}

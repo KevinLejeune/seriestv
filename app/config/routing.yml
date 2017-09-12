@@ -1,0 +1,34 @@
+backend_people:
+    resource: "@BackendBundle/Controller/PeopleController.php"
+    type:     annotation
+
+backend_people.type:
+    resource: "@BackendBundle/Controller/People_typeController.php"
+    type:     annotation
+
+backend_saison:
+    resource: "@BackendBundle/Controller/SaisonController.php"
+    type:     annotation
+
+backend_episode:
+    resource: "@BackendBundle/Controller/EpisodeController.php"
+    type:     annotation
+
+backend_serie:
+    resource: "@BackendBundle/Controller/SerieController.php"
+    type:     annotation
+
+frontend:
+    resource: "@FrontendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+backend:
+    resource: "@BackendBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    prefix: /app

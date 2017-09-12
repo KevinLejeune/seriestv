@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Episodes list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th></th>
+                <th>Série</th>
+                <th>Saison</th>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for episode in episodes %}
+            <tr>
+                <td><a href="{{ path('episode_show', { 'id': episode.id }) }}">{{ episode.id }}</a></td>
+                <td><img src="{{ asset('images/p13935058_b_v8_ab.jpg') }}" width="75px"></td>
+                <td>{{ episode.serie.nom }}</td>
+                <td>{{ episode.saison.name }}</td>
+                <td>Episode {{ episode.number }} - {{ episode.name }}</td>
+                <td>{% if episode.duration %}{{ episode.duration|date('H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a class="btn btn-default" href="{{ path('episode_show', { 'id': episode.id }) }}" role="button"><span class="glyphicon glyphicon-eye-open"></span> Voir</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-default" href="{{ path('episode_edit', { 'id': episode.id }) }}" role="button"><span class="glyphicon glyphicon-pencil"></span> Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('episode_new') }}">Create a new episode</a>
+        </li>
+    </ul>
+{% endblock %}

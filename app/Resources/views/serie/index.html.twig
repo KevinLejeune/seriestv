@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Series list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Affiche</th>
+                <th>Nom</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for serie in series %}
+            <tr>
+                <td><a href="{{ path('serie_show', { 'id': serie.id }) }}">{{ serie.id }}</a></td>
+                <td><img src="{{ asset('uploads/'~serie.affiche) }}" width="100px"/></td>
+                <td>{{ serie.nom }}</td>
+                <td>{% if serie.date %}{{ serie.date|date('d-m-Y') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('serie_show', { 'id': serie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('serie_edit', { 'id': serie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('serie_new') }}">Create a new serie</a>
+        </li>
+    </ul>
+{% endblock %}
