@@ -19,7 +19,7 @@
         {% for episode in episodes %}
             <tr>
                 <td><a href="{{ path('episode_show', { 'id': episode.id }) }}">{{ episode.id }}</a></td>
-                <td><img src="{{ asset('images/p13935058_b_v8_ab.jpg') }}" width="75px"></td>
+                <td><img src="{{ asset('uploads/'~episode.serie.affiche) }}" width="100px"/></td>
                 <td>{{ episode.serie.nom }}</td>
                 <td>{{ episode.saison.name }}</td>
                 <td>Episode {{ episode.number }} - {{ episode.name }}</td>

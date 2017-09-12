@@ -44,7 +44,6 @@ class SerieController extends Controller
         $serie = new Serie();
         $form = $this->createForm('BackendBundle\Form\SerieType', $serie);
         $form->handleRequest($request);
-
         
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $serie->getAffiche();
