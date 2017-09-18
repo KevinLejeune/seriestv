@@ -3,14 +3,15 @@
 {% block body %}
     <h1>Episodes list</h1>
 
-    <table class="table">
+    <table class="table" id="example" width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>Id</th>
                 <th></th>
                 <th>Série</th>
                 <th>Saison</th>
-                <th>Name</th>
+                <th>Nom</th>
+                <th>Distribution</th>
                 <th>Duration</th>
                 <th>Actions</th>
             </tr>
@@ -23,6 +24,11 @@
                 <td>{{ episode.serie.nom }}</td>
                 <td>{{ episode.saison.name }}</td>
                 <td>Episode {{ episode.number }} - {{ episode.name }}</td>
+                <td>
+                    {% for episodePeople in episode.episodePeoples %}
+                        {{ episodePeople.peopleType }} : {{ episodePeople.people.name }}
+                    {% endfor %}
+                </td>
                 <td>{% if episode.duration %}{{ episode.duration|date('H:i:s') }}{% endif %}</td>
                 <td>
                     <ul style="list-style-type: none;">
@@ -44,4 +50,12 @@
             <a href="{{ path('episode_new') }}">Create a new episode</a>
         </li>
     </ul>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
 {% endblock %}

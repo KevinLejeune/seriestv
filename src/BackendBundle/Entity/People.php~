@@ -41,8 +41,18 @@ class People
      */
     private $people_types;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Episode", mappedBy="peoples")
+     */
+    private $episodes;
+
     public function __construct() {
-        $this->$people_types = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->people_types = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->episodes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function __toString() {
+        return $this->name;
     }
 
     /**
@@ -101,5 +111,74 @@ class People
     public function getBirthDate()
     {
         return $this->birthDate;
+    }
+
+    /**
+     * Add peopleType
+     *
+     * @param \BackendBundle\Entity\People_type $peopleType
+     *
+     * @return People
+     */
+    public function addPeopleType(\BackendBundle\Entity\People_type $peopleType)
+    {
+        $this->people_types[] = $peopleType;
+
+        return $this;
+    }
+
+    /**
+     * Remove peopleType
+     *
+     * @param \BackendBundle\Entity\People_type $peopleType
+     */
+    public function removePeopleType(\BackendBundle\Entity\People_type $peopleType)
+    {
+        $this->people_types->removeElement($peopleType);
+    }
+
+    /*
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPeopleTypes()
+    {
+        return $this->people_types;
+    }
+
+    
+
+    /**
+     * Add episode
+     *
+     * @param \BackendBundle\Entity\Episode $episode
+     *
+     * @return People
+     */
+    public function addEpisode(\BackendBundle\Entity\Episode $episode)
+    {
+        $this->episodes[] = $episode;
+
+        return $this;
+    }
+
+    /**
+     * Remove episode
+     *
+     * @param \BackendBundle\Entity\Episode $episode
+     */
+    public function removeEpisode(\BackendBundle\Entity\Episode $episode)
+    {
+        $this->episodes->removeElement($episode);
+    }
+
+    /**
+     * Get episodes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEpisodes()
+    {
+        return $this->episodes;
     }
 }

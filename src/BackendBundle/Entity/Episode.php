@@ -53,6 +53,19 @@ class Episode
     private $saison;
 
     /**
+     * @ORM\OneToMany(targetEntity="EpisodePeople", mappedBy="episode");
+     */
+    private $episodePeoples;
+
+    public function __construct() {
+        $this->episodePeoples = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function __toString() {
+        return $this->name;
+    }
+
+    /**
      * Get id
      *
      * @return int
@@ -180,5 +193,39 @@ class Episode
     public function getNumber()
     {
         return $this->number;
+    }
+
+    /**
+     * Add episodePeople
+     *
+     * @param \BackendBundle\Entity\EpisodePeople $episodePeople
+     *
+     * @return Episode
+     */
+    public function addEpisodePeople(\BackendBundle\Entity\EpisodePeople $episodePeople)
+    {
+        $this->episodePeoples[] = $episodePeople;
+
+        return $this;
+    }
+
+    /**
+     * Remove episodePeople
+     *
+     * @param \BackendBundle\Entity\EpisodePeople $episodePeople
+     */
+    public function removeEpisodePeople(\BackendBundle\Entity\EpisodePeople $episodePeople)
+    {
+        $this->episodePeoples->removeElement($episodePeople);
+    }
+
+    /**
+     * Get episodePeoples
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEpisodePeoples()
+    {
+        return $this->episodePeoples;
     }
 }

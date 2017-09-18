@@ -114,6 +114,68 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
                 }
                 not_episode_delete:
 
+                if (0 === strpos($pathinfo, '/admin/episodepeople')) {
+                    // episodepeople_index
+                    if ('/admin/episodepeople' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_episodepeople_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'episodepeople_index');
+                        }
+
+                        return array (  '_controller' => 'BackendBundle\\Controller\\EpisodePeopleController::indexAction',  '_route' => 'episodepeople_index',);
+                    }
+                    not_episodepeople_index:
+
+                    // episodepeople_new
+                    if ('/admin/episodepeople/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_episodepeople_new;
+                        }
+
+                        return array (  '_controller' => 'BackendBundle\\Controller\\EpisodePeopleController::newAction',  '_route' => 'episodepeople_new',);
+                    }
+                    not_episodepeople_new:
+
+                    // episodepeople_show
+                    if (preg_match('#^/admin/episodepeople/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_episodepeople_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'episodepeople_show')), array (  '_controller' => 'BackendBundle\\Controller\\EpisodePeopleController::showAction',));
+                    }
+                    not_episodepeople_show:
+
+                    // episodepeople_edit
+                    if (preg_match('#^/admin/episodepeople/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_episodepeople_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'episodepeople_edit')), array (  '_controller' => 'BackendBundle\\Controller\\EpisodePeopleController::editAction',));
+                    }
+                    not_episodepeople_edit:
+
+                    // episodepeople_delete
+                    if (preg_match('#^/admin/episodepeople/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_episodepeople_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'episodepeople_delete')), array (  '_controller' => 'BackendBundle\\Controller\\EpisodePeopleController::deleteAction',));
+                    }
+                    not_episodepeople_delete:
+
+                }
+
             }
 
             elseif (0 === strpos($pathinfo, '/admin/people')) {

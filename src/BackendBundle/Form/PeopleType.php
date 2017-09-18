@@ -13,7 +13,7 @@ class PeopleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('birthDate');
+        $builder->add('name')->add('birthDate')->add('people_types');
     }
     
     /**

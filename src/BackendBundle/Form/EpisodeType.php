@@ -13,7 +13,7 @@ class EpisodeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('number')->add('name')->add('duration')->add('serie')->add('saison');
+        $builder->add('number')->add('name')->add('duration')->add('serie')->add('saison')->add('peoples');
     }
     
     /**

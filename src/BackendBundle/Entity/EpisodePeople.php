@@ -1,0 +1,125 @@
+<?php
+
+namespace BackendBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * People
+ *
+ * @ORM\Table(name="episode_people_new")
+ * @ORM\Entity(repositoryClass="BackendBundle\Repository\EpidodePeopleRepository")
+ */
+class EpisodePeople
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Episode",inversedBy="episodePeoples")
+     */
+    private $episode;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="People")
+     */
+    private $people;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="People_type", inversedBy="episodePeoples")
+     */
+    private $peopleType;
+
+    public function __toString() {
+        return strval($this->id);
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set episode
+     *
+     * @param \BackendBundle\Entity\Episode $episode
+     *
+     * @return EpisodePeople
+     */
+    public function setEpisode(\BackendBundle\Entity\Episode $episode = null)
+    {
+        $this->episode = $episode;
+
+        return $this;
+    }
+
+    /**
+     * Get episode
+     *
+     * @return \BackendBundle\Entity\Episode
+     */
+    public function getEpisode()
+    {
+        return $this->episode;
+    }
+
+    /**
+     * Set people
+     *
+     * @param \BackendBundle\Entity\People $people
+     *
+     * @return EpisodePeople
+     */
+    public function setPeople(\BackendBundle\Entity\People $people = null)
+    {
+        $this->people = $people;
+
+        return $this;
+    }
+
+    /**
+     * Get people
+     *
+     * @return \BackendBundle\Entity\People
+     */
+    public function getPeople()
+    {
+        return $this->people;
+    }
+
+    /**
+     * Set peopleType
+     *
+     * @param \BackendBundle\Entity\People_type $peopleType
+     *
+     * @return EpisodePeople
+     */
+    public function setPeopleType(\BackendBundle\Entity\People_type $peopleType = null)
+    {
+        $this->peopleType = $peopleType;
+
+        return $this;
+    }
+
+    /**
+     * Get peopleType
+     *
+     * @return \BackendBundle\Entity\People_type
+     */
+    public function getPeopleType()
+    {
+        return $this->peopleType;
+    }
+}

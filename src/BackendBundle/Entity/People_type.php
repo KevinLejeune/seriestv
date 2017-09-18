@@ -29,12 +29,22 @@ class People_type
     private $lib;
 
     /**
-     * @ORM\ManyToMany(targetEntity="People", mappedBy="peopleTypes");
+     * @ORM\ManyToMany(targetEntity="People", mappedBy="peopleTypes")
      */
     private $peoples;
 
+    /**
+     * @ORM\OneToMany(targetEntity="EpisodePeople", mappedBy="people_type")
+     */
+    private $episodePeoples;
+
     public function __construct() {
         $this->peoples = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->episodePeoples = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function __toString() {
+        return $this->lib;
     }
 
     /**
@@ -103,5 +113,39 @@ class People_type
     public function getPeoples()
     {
         return $this->peoples;
+    }
+
+    /**
+     * Add episodePeople
+     *
+     * @param \BackendBundle\Entity\EpisodePeople $episodePeople
+     *
+     * @return People_type
+     */
+    public function addEpisodePeople(\BackendBundle\Entity\EpisodePeople $episodePeople)
+    {
+        $this->episodePeoples[] = $episodePeople;
+
+        return $this;
+    }
+
+    /**
+     * Remove episodePeople
+     *
+     * @param \BackendBundle\Entity\EpisodePeople $episodePeople
+     */
+    public function removeEpisodePeople(\BackendBundle\Entity\EpisodePeople $episodePeople)
+    {
+        $this->episodePeoples->removeElement($episodePeople);
+    }
+
+    /**
+     * Get episodePeoples
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEpisodePeoples()
+    {
+        return $this->episodePeoples;
     }
 }

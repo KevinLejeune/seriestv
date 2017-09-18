@@ -1,6 +1,6 @@
 <?php
 
-/* serie/index.html.twig */
+/* :serie:index.html.twig */
 class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367fe438 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "serie/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", ":serie:index.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -21,29 +21,29 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_021c2de6bbbd4cbdb8564d5317860dc69dd0128592d3894728bf5ec91da9288e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_021c2de6bbbd4cbdb8564d5317860dc69dd0128592d3894728bf5ec91da9288e->enter($__internal_021c2de6bbbd4cbdb8564d5317860dc69dd0128592d3894728bf5ec91da9288e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "serie/index.html.twig"));
+        $__internal_0ab11907e4f77acf360e1f078f027e284f643221f228c9b11585515d2775843b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0ab11907e4f77acf360e1f078f027e284f643221f228c9b11585515d2775843b->enter($__internal_0ab11907e4f77acf360e1f078f027e284f643221f228c9b11585515d2775843b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":serie:index.html.twig"));
 
-        $__internal_02c613f4c04fccebdcfce156db32afbfa1e29593918b2baa6466f0c00ba1ebb9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_02c613f4c04fccebdcfce156db32afbfa1e29593918b2baa6466f0c00ba1ebb9->enter($__internal_02c613f4c04fccebdcfce156db32afbfa1e29593918b2baa6466f0c00ba1ebb9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "serie/index.html.twig"));
+        $__internal_8e39587276f4602e2c1ddb4fb2a4b30cdb5f48091a4a1362dc42266a76327c0c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8e39587276f4602e2c1ddb4fb2a4b30cdb5f48091a4a1362dc42266a76327c0c->enter($__internal_8e39587276f4602e2c1ddb4fb2a4b30cdb5f48091a4a1362dc42266a76327c0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":serie:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_021c2de6bbbd4cbdb8564d5317860dc69dd0128592d3894728bf5ec91da9288e->leave($__internal_021c2de6bbbd4cbdb8564d5317860dc69dd0128592d3894728bf5ec91da9288e_prof);
+        $__internal_0ab11907e4f77acf360e1f078f027e284f643221f228c9b11585515d2775843b->leave($__internal_0ab11907e4f77acf360e1f078f027e284f643221f228c9b11585515d2775843b_prof);
 
         
-        $__internal_02c613f4c04fccebdcfce156db32afbfa1e29593918b2baa6466f0c00ba1ebb9->leave($__internal_02c613f4c04fccebdcfce156db32afbfa1e29593918b2baa6466f0c00ba1ebb9_prof);
+        $__internal_8e39587276f4602e2c1ddb4fb2a4b30cdb5f48091a4a1362dc42266a76327c0c->leave($__internal_8e39587276f4602e2c1ddb4fb2a4b30cdb5f48091a4a1362dc42266a76327c0c_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_293c14683b65ca06079d544f3d98bfd2a0c28793ae6a7f6c871e5c47f3a75f7d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_293c14683b65ca06079d544f3d98bfd2a0c28793ae6a7f6c871e5c47f3a75f7d->enter($__internal_293c14683b65ca06079d544f3d98bfd2a0c28793ae6a7f6c871e5c47f3a75f7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_70b35af782b3273027373086129e19d4c444a0768211a1d486d48ee2a7092ece = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_70b35af782b3273027373086129e19d4c444a0768211a1d486d48ee2a7092ece->enter($__internal_70b35af782b3273027373086129e19d4c444a0768211a1d486d48ee2a7092ece_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_e5f0fb528e8a3b83221b810679a95899732a92803ef40a1be7cb297b7175fa74 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e5f0fb528e8a3b83221b810679a95899732a92803ef40a1be7cb297b7175fa74->enter($__internal_e5f0fb528e8a3b83221b810679a95899732a92803ef40a1be7cb297b7175fa74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d324d567ab80bf455392436ef20bd7ae5750d774c3192868b967e270e6201978 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d324d567ab80bf455392436ef20bd7ae5750d774c3192868b967e270e6201978->enter($__internal_d324d567ab80bf455392436ef20bd7ae5750d774c3192868b967e270e6201978_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Series list</h1>
@@ -52,6 +52,7 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Affiche</th>
                 <th>Nom</th>
                 <th>Date</th>
                 <th>Actions</th>
@@ -59,39 +60,43 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         </thead>
         <tbody>
         ";
-        // line 16
+        // line 17
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["series"] ?? $this->getContext($context, "series")));
         foreach ($context['_seq'] as $context["_key"] => $context["serie"]) {
-            // line 17
+            // line 18
             echo "            <tr>
                 <td><a href=\"";
-            // line 18
+            // line 19
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("serie_show", array("id" => $this->getAttribute($context["serie"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["serie"], "id", array()), "html", null, true);
             echo "</a></td>
+                <td><img src=\"";
+            // line 20
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/" . $this->getAttribute($context["serie"], "affiche", array()))), "html", null, true);
+            echo "\" width=\"100px\"/></td>
                 <td>";
-            // line 19
+            // line 21
             echo twig_escape_filter($this->env, $this->getAttribute($context["serie"], "nom", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 20
+            // line 22
             if ($this->getAttribute($context["serie"], "date", array())) {
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["serie"], "date", array()), "Y-m-d"), "html", null, true);
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["serie"], "date", array()), "d-m-Y"), "html", null, true);
             }
             echo "</td>
                 <td>
                     <ul>
                         <li>
                             <a href=\"";
-            // line 24
+            // line 26
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("serie_show", array("id" => $this->getAttribute($context["serie"], "id", array()))), "html", null, true);
             echo "\">show</a>
                         </li>
                         <li>
                             <a href=\"";
-            // line 27
+            // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("serie_edit", array("id" => $this->getAttribute($context["serie"], "id", array()))), "html", null, true);
             echo "\">edit</a>
                         </li>
@@ -103,30 +108,30 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['serie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "        </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 38
+        // line 40
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("serie_new");
         echo "\">Create a new serie</a>
         </li>
     </ul>
 ";
         
-        $__internal_e5f0fb528e8a3b83221b810679a95899732a92803ef40a1be7cb297b7175fa74->leave($__internal_e5f0fb528e8a3b83221b810679a95899732a92803ef40a1be7cb297b7175fa74_prof);
+        $__internal_d324d567ab80bf455392436ef20bd7ae5750d774c3192868b967e270e6201978->leave($__internal_d324d567ab80bf455392436ef20bd7ae5750d774c3192868b967e270e6201978_prof);
 
         
-        $__internal_293c14683b65ca06079d544f3d98bfd2a0c28793ae6a7f6c871e5c47f3a75f7d->leave($__internal_293c14683b65ca06079d544f3d98bfd2a0c28793ae6a7f6c871e5c47f3a75f7d_prof);
+        $__internal_70b35af782b3273027373086129e19d4c444a0768211a1d486d48ee2a7092ece->leave($__internal_70b35af782b3273027373086129e19d4c444a0768211a1d486d48ee2a7092ece_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "serie/index.html.twig";
+        return ":serie:index.html.twig";
     }
 
     public function isTraitable()
@@ -136,7 +141,7 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
 
     public function getDebugInfo()
     {
-        return array (  114 => 38,  107 => 33,  95 => 27,  89 => 24,  80 => 20,  76 => 19,  70 => 18,  67 => 17,  63 => 16,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  119 => 40,  112 => 35,  100 => 29,  94 => 26,  85 => 22,  81 => 21,  77 => 20,  71 => 19,  68 => 18,  64 => 17,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -158,6 +163,7 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Affiche</th>
                 <th>Nom</th>
                 <th>Date</th>
                 <th>Actions</th>
@@ -167,8 +173,9 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         {% for serie in series %}
             <tr>
                 <td><a href=\"{{ path('serie_show', { 'id': serie.id }) }}\">{{ serie.id }}</a></td>
+                <td><img src=\"{{ asset('uploads/'~serie.affiche) }}\" width=\"100px\"/></td>
                 <td>{{ serie.nom }}</td>
-                <td>{% if serie.date %}{{ serie.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if serie.date %}{{ serie.date|date('d-m-Y') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>
@@ -190,6 +197,6 @@ class __TwigTemplate_33771134ec31705f3644dd92b8cbeba938318d0fefeed3d134567eca367
         </li>
     </ul>
 {% endblock %}
-", "serie/index.html.twig", "/var/www/html/seriestv/app/Resources/views/serie/index.html.twig");
+", ":serie:index.html.twig", "/Applications/MAMP/htdocs/seriestv/app/Resources/views/serie/index.html.twig");
     }
 }

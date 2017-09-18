@@ -4,14 +4,21 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+
         <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('dataTables/css/jquery.dataTables.min.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
         <script type="text/javascript" src="{{ asset('jquery-min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('dataTables/js/jquery.dataTables.min.js') }}"></script>
     </head>
     <body>
+        <div>
+            <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}
             

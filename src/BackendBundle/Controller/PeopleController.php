@@ -68,7 +68,7 @@ class PeopleController extends Controller
         $deleteForm = $this->createDeleteForm($people);
 
         return $this->render('people/show.html.twig', array(
-            'People' => $people,
+            'people' => $people,
             'delete_form' => $deleteForm->createView(),
         ));
     }

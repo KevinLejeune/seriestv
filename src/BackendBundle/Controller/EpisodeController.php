@@ -28,6 +28,10 @@ class EpisodeController extends Controller
 
         $episodes = $em->getRepository('BackendBundle:Episode')->findAll();
 
+        $test = $episodes[4];
+
+        //var_dump($test->episodePeoples);die;
+
         return $this->render('episode/index.html.twig', array(
             'episodes' => $episodes,
         ));

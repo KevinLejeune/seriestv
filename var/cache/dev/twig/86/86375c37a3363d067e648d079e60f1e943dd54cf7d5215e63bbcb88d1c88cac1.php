@@ -15,20 +15,20 @@ class __TwigTemplate_7bfc209e50a5f46a4ddc6c0f24c336d69754fe64ab977baf02fa3d3f7a2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_26f6c5c73cb7ee40144c092c0edd59303431abdde3264c19ce79f64e01ed782d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_26f6c5c73cb7ee40144c092c0edd59303431abdde3264c19ce79f64e01ed782d->enter($__internal_26f6c5c73cb7ee40144c092c0edd59303431abdde3264c19ce79f64e01ed782d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
+        $__internal_d0df7f59ee775666dc2aa01cb180a1c606b7d02bf543a349770b844feb76df3c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d0df7f59ee775666dc2aa01cb180a1c606b7d02bf543a349770b844feb76df3c->enter($__internal_d0df7f59ee775666dc2aa01cb180a1c606b7d02bf543a349770b844feb76df3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
 
-        $__internal_437fed5ddc56b762f323b96a2947a754add79ab85da3e43d18ecd6fe7c5bda7b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_437fed5ddc56b762f323b96a2947a754add79ab85da3e43d18ecd6fe7c5bda7b->enter($__internal_437fed5ddc56b762f323b96a2947a754add79ab85da3e43d18ecd6fe7c5bda7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
+        $__internal_3a448560ba444929167f7b358f46a8c51c6035528baa56f1bee10fd0d5be42ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3a448560ba444929167f7b358f46a8c51c6035528baa56f1bee10fd0d5be42ad->enter($__internal_3a448560ba444929167f7b358f46a8c51c6035528baa56f1bee10fd0d5be42ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
 
         // line 1
         echo "<svg width=\"1792\" height=\"1792\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1344 800v64q0 14-9 23t-23 9H960v352q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23V896H480q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h352V416q0-14 9-23t23-9h64q14 0 23 9t9 23v352h352q14 0 23 9t9 23zm128 448V416q0-66-47-113t-113-47H480q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5T1312 1536H480q-119 0-203.5-84.5T192 1248V416q0-119 84.5-203.5T480 128h832q119 0 203.5 84.5T1600 416z\"/></svg>
 ";
         
-        $__internal_26f6c5c73cb7ee40144c092c0edd59303431abdde3264c19ce79f64e01ed782d->leave($__internal_26f6c5c73cb7ee40144c092c0edd59303431abdde3264c19ce79f64e01ed782d_prof);
+        $__internal_d0df7f59ee775666dc2aa01cb180a1c606b7d02bf543a349770b844feb76df3c->leave($__internal_d0df7f59ee775666dc2aa01cb180a1c606b7d02bf543a349770b844feb76df3c_prof);
 
         
-        $__internal_437fed5ddc56b762f323b96a2947a754add79ab85da3e43d18ecd6fe7c5bda7b->leave($__internal_437fed5ddc56b762f323b96a2947a754add79ab85da3e43d18ecd6fe7c5bda7b_prof);
+        $__internal_3a448560ba444929167f7b358f46a8c51c6035528baa56f1bee10fd0d5be42ad->leave($__internal_3a448560ba444929167f7b358f46a8c51c6035528baa56f1bee10fd0d5be42ad_prof);
 
     }
 
@@ -53,6 +53,6 @@ class __TwigTemplate_7bfc209e50a5f46a4ddc6c0f24c336d69754fe64ab977baf02fa3d3f7a2
     public function getSourceContext()
     {
         return new Twig_Source("<svg width=\"1792\" height=\"1792\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1344 800v64q0 14-9 23t-23 9H960v352q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23V896H480q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h352V416q0-14 9-23t23-9h64q14 0 23 9t9 23v352h352q14 0 23 9t9 23zm128 448V416q0-66-47-113t-113-47H480q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5T1312 1536H480q-119 0-203.5-84.5T192 1248V416q0-119 84.5-203.5T480 128h832q119 0 203.5 84.5T1600 416z\"/></svg>
-", "@Twig/images/icon-plus-square-o.svg", "/var/www/html/seriestv/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/images/icon-plus-square-o.svg");
+", "@Twig/images/icon-plus-square-o.svg", "/Applications/MAMP/htdocs/seriestv/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/images/icon-plus-square-o.svg");
     }
 }

@@ -9,6 +9,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Birthdate</th>
+                <th>Type</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,6 +19,11 @@
                 <td><a href="{{ path('people_show', { 'id': person.id }) }}">{{ person.id }}</a></td>
                 <td>{{ person.name }}</td>
                 <td>{% if person.birthDate %}{{ person.birthDate|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    {% for type in person.peopleTypes %}
+                        {{ type }}
+                    {% endfor %}
+                </td>
                 <td>
                     <ul>
                         <li>
